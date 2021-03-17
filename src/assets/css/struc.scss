@@ -1,0 +1,115 @@
+
+.line{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+.el{
+    border: none;
+    border-radius: 50%; 
+    background: white;
+    width: 7px;
+    height: 7px;
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+     &.el_active{
+         background: green;
+     }
+}
+   &.icons{
+    i{
+       color: white;
+       background: #2c3b42;
+       font-size: 17px;
+       padding: 7px;
+       border: none;
+       border-radius: 50%;
+       min-width: 32px;
+       min-height: 32px;
+       margin-left: 12px;
+       transition: 0.3s;
+       &:hover{
+        background: green;
+       }
+}
+   }
+}
+
+.w7{
+    font-weight: 700;
+}
+
+
+@mixin column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@mixin cd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin cdself($p:relative, $t:50%, $l:50%){
+    position: $p;
+    top: $t;
+    left: $l;
+    transform: translate(-50%, -50%);
+}
+
+.left{
+    text-align: left;
+  h1,h3,h4,h5,h6,p,span{
+      text-align: left;
+  }         
+}
+
+@mixin columnX{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+@mixin columnY{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+// Media
+
+// // xs
+// @media (max-width: 575.98px) {
+    
+// }
+
+// // sm
+// @media (min-width: 576px) and (max-width: 767.98px) {
+    
+// }
+
+// md
+// @media (min-width: 768px) and (max-width: 991.98px) {
+  
+// }
+
+// // lg
+// @media (min-width: 992px) and (max-width: 1199.98px) {
+    
+// }
+
+// // xl
+// @media (min-width: 1200px) {
+    
+// } 
+

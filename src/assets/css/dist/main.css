@@ -1,0 +1,389 @@
+.line {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.line .el {
+  border: none;
+  border-radius: 50%;
+  background: white;
+  width: 7px;
+  height: 7px;
+  margin: 0 10px;
+  position: relative;
+  cursor: pointer;
+}
+.line .el.el_active {
+  background: green;
+}
+.line.icons i {
+  color: white;
+  background: #2c3b42;
+  font-size: 17px;
+  padding: 7px;
+  border: none;
+  border-radius: 50%;
+  min-width: 32px;
+  min-height: 32px;
+  margin-left: 12px;
+  transition: 0.3s;
+}
+.line.icons i:hover {
+  background: green;
+}
+
+.w7 {
+  font-weight: 700;
+}
+
+.left {
+  text-align: left;
+}
+.left h1, .left h3, .left h4, .left h5, .left h6, .left p, .left span {
+  text-align: left;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+  max-width: 100vw;
+  /* Track */
+}
+*::-webkit-scrollbar {
+  width: 3.5px;
+  margin-left: 2px;
+}
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+*::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+body {
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.page {
+  min-height: 100px;
+  height: 100vh;
+}
+
+.top {
+  z-index: 10;
+  position: absolute;
+  margin: 0 !important;
+  border-bottom: 2px solid silver;
+  height: 8%;
+  min-height: 8%;
+  max-height: 8%;
+  width: 100% !important;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+}
+.top h3 {
+  display: flex;
+  font-weight: 700;
+  margin-bottom: 0;
+  align-items: center;
+}
+.top .logo img {
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.trash, .sets {
+  padding: 12% 0 10px !important;
+}
+
+a {
+  transition: 0.15s;
+  text-decoration: none !important;
+  color: black;
+}
+
+i {
+  cursor: pointer;
+}
+
+.fa-undo-alt {
+  color: deepskyblue;
+}
+
+.pbox {
+  padding: 24px 28px;
+}
+
+.b, .color {
+  border: 2px solid silver;
+  border-radius: 6px;
+}
+
+.fa-trash-alt {
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+.fa-trash-alt:hover, .fa-trash-alt.active {
+  color: red;
+}
+
+.line {
+  text-decoration: line-through;
+  color: silver;
+}
+
+.main {
+  position: absolute;
+  padding: 12% 20px 16% !important;
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+.main .inner {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  background: white;
+  min-height: 60%;
+  max-height: 95%;
+}
+.main .f, .main .inner {
+  width: 100%;
+}
+.main .f:not(.inner), .main .inner:not(.inner) {
+  height: 100%;
+}
+
+.calendar {
+  position: absolute;
+  padding-top: 18% !important;
+}
+.calendar .days {
+  position: absolute;
+  top: 8%;
+  height: 3%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid silver;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.calendar .days .num {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  width: auto;
+  flex-grow: 1;
+  font-weight: 700;
+}
+.calendar .days .num.active {
+  color: #2872FF;
+}
+.calendar .days .num:not(:last-child) {
+  border-right: 2px solid silver;
+}
+.calendar .plus {
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #0000a1;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  position: relative;
+  bottom: 0px;
+  width: 25px;
+  height: 25px;
+  transform: scale(1.5) translate(0, 45%);
+  cursor: pointer;
+  z-index: 111 !important;
+}
+.calendar ul, .calendar .inner {
+  min-height: 80px;
+}
+.calendar ul {
+  overflow-y: scroll;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+}
+.item input {
+  margin-top: 2.2px;
+}
+
+ul {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100%;
+  height: 100%;
+}
+
+.trash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.trash li {
+  color: red;
+  font-weight: 600;
+}
+.trash input {
+  border-color: red !important;
+  box-shadow: red !important;
+  background: blue !important;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  margin: 0 !important;
+  border-top: 2px solid silver;
+  margin-top: auto;
+  height: 8%;
+  width: 100% !important;
+  background: gray;
+}
+footer .col-sm-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+}
+footer .col-sm-4.active i:not(.fa-cog) {
+  color: #2872FF;
+}
+footer .col-sm-4.active i:not(.fa-cog).fa-trash-alt {
+  color: red;
+}
+footer .col-sm-4:not(:last-child) {
+  border-right: 2px solid silver;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto;
+  /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 60%;
+  /* Could be more or less, depending on screen size */
+  height: 78%;
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 12px;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.modal-content {
+  width: 44%;
+  height: 58%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content .row {
+  width: 80%;
+  height: 80%;
+}
+.modal-content .row .color {
+  width: 95%;
+  height: 95%;
+  min-width: 60px !important;
+}
+.modal-content .close {
+  z-index: 19;
+}
+.modal-content .sound {
+  transform: scale(2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 240px;
+}
+.modal-content .sound input, .modal-content .sound button {
+  margin-top: 20px;
+}
